@@ -3,12 +3,12 @@ from flask import Flask, render_template, request, redirect, session
 from flask_app.models.dojo import Dojo
 
 
-@app.route('/dojos')
+@app.route('/dojos') #this shows all the dojos
 def dojo():
     all_dojos = Dojo.get_all()
     return render_template('create.html', all_the_dojos = all_dojos)
 
-@app.route('/dojos/new', methods = ['POST'])
+@app.route('/dojos/new', methods = ['POST']) #this is to actually create new dojo
 def create_dojo():
     print(request.form)
     data = {

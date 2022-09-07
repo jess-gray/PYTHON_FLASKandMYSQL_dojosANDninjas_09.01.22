@@ -39,10 +39,11 @@ class Dojo:
                 'last_name' : one_ninja['last_name'],
                 'age': one_ninja['age'],
                 'created_at' : one_ninja['ninjas.created_at'],
-                'updated_at' : one_ninja['ninjas.updated_at']
+                'updated_at' : one_ninja['ninjas.updated_at'],
+                'dojo_id' : one_ninja['dojo_id']
             }
             ninja_obj = ninja.Ninja(data)
             one_dojo.ninjas.append(ninja_obj)
         return one_dojo
 
-        #keep getting tuple out of range 
+    
